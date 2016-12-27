@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DatePickerEditText">
+        <attr name="textSize" format="dimension"/>
+        <attr name="setPickerIcon" format="integer"/>
+        <attr name="setFontAwesomeIcon" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="setMarginBetweenTextAndIcon" format="dimension"/>
+        <attr name="showUnderline" format="boolean"/>
+        <attr name="hint" format="string"/>
+        <attr name="underlineColor" format="color"/>
+        <attr name="fontAwesomeIconColor" format="color"/>
+        <attr name="fontAwesomeIconSize" format="dimension"/>
+    </declare-styleable>
+</resources>

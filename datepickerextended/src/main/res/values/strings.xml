@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DatePickerExtended</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+</resources>
