@@ -19,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.lmntrx.livin.library.droidawesome.DroidAwesomeImageView;
@@ -69,10 +68,19 @@ public class DatePickerEditText extends LinearLayout {
             fontAwesomeIconColor = typedArray.getColor(R.styleable.DatePickerEditText_fontAwesomeIconColor, ContextCompat.getColor(getContext(),R.color.unSelectedItemColor));
             pickerDrawable = typedArray.getDrawable(R.styleable.DatePickerEditText_setPickerIcon);
             underlineColor = typedArray.getColor(R.styleable.DatePickerEditText_underlineColor,ContextCompat.getColor(getContext(),R.color.unSelectedItemColor));
+
             marginBetweenTextAndIcon = typedArray.getDimension(R.styleable.DatePickerEditText_setMarginBetweenTextAndIcon,getResources().getDimension(R.dimen.default_gap));
+
             fontAwesomeIconSize = typedArray.getDimension(R.styleable.DatePickerEditText_fontAwesomeIconSize,getResources().getDimension(R.dimen.default_font_awesome_icon_size));
+
             textSize = typedArray.getDimension(R.styleable.DatePickerEditText_textSize,getResources().getDimension(R.dimen.default_text_size));
+
             showUnderline = typedArray.getBoolean(R.styleable.DatePickerEditText_showUnderline,true);
+
+
+            View view = findViewById(R.id.view);
+            view.setVisibility(showUnderline?VISIBLE:GONE);
+
             Log.d("Test",
                     fontAwesomeText + " " + hint + " " + textColor + " " + fontAwesomeIconColor + " " + pickerDrawable + " " +
                     underlineColor + " " +marginBetweenTextAndIcon + " " +fontAwesomeIconSize + " " +textSize + " " +showUnderline
@@ -99,9 +107,15 @@ public class DatePickerEditText extends LinearLayout {
         super.onFinishInflate();
         dateInput = (EditText) findViewById(R.id.dateInputEditText);
         calendarImage = (DroidAwesomeImageView) findViewById(R.id.calendarIcon);
+        if (textSize > 0){
+            dateInput.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSize);
+        }
+
+        /*
         View view = findViewById(R.id.view);
 
         view.setVisibility(showUnderline?VISIBLE:GONE);
+
         if (pickerDrawable != null){
             calendarImage.setImageDrawable(pickerDrawable);
         }else {
@@ -113,10 +127,10 @@ public class DatePickerEditText extends LinearLayout {
                     dateInput.setTextColor(ContextCompat.getColor(getContext(),textColor));
                 }catch (Exception ignored){}
             }
-            if (textSize > 0f){
+            if (textSize > 0){
                 dateInput.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSize);
             }
-            if (marginBetweenTextAndIcon > 0f){
+            if (marginBetweenTextAndIcon > 0){
                 int leftPX = (int) TypedValue.applyDimension(
                         TypedValue.COMPLEX_UNIT_DIP,
                         marginBetweenTextAndIcon,
@@ -138,7 +152,7 @@ public class DatePickerEditText extends LinearLayout {
                     DrawableCompat.setTint(view.getBackground(), ContextCompat.getColor(getContext(), underlineColor));
                 }catch (Exception ignored){}
             }
-        }
+        }*/
 
 
         calendarImage.setOnClickListener(new OnClickListener() {

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="droid-awesome-1.1.6">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/datepickerextended/build/intermediates/exploded-aar/com.lmntrx.livin.library.droidawesome/droid-awesome/1.1.6/res" />
+      <root url="jar://$PROJECT_DIR$/datepickerextended/build/intermediates/exploded-aar/com.lmntrx.livin.library.droidawesome/droid-awesome/1.1.6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lmntrx.livin.library.droidawesome/droid-awesome/1.1.6/8ed64c95e4636c6410b298de7b4120b60bcbf9e9/droid-awesome-1.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

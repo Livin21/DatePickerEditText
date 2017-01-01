@@ -8,12 +8,12 @@
     <com.lmntrx.android.datepickerextended.DatePickerEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:showUnderline="false"
-        app:hint="hello"
         app:textColor="@color/colorAccent"
-        app:textSize="12sp"
-        app:setMarginBetweenTextAndIcon="1dp"
-        app:setFontAwesomeIcon="gfjfjh"
+        app:showUnderline="false"
+        app:fontAwesomeIconColor="@color/colorPrimary"
+        app:hint="date"
+        app:fontAwesomeIconSize="20sp"
+        app:setMarginBetweenTextAndIcon="@dimen/activity_horizontal_margin"
         />
 
 </RelativeLayout>
